@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100dvh;
+    scroll-behavior: smooth; /*Para rolar para a pagina, quando clicar no link*/
+    display: flex;
+    flex-direction: column;
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    overflow-x: hidden;
+    overflow-y: scroll; /* mantém rolagem, mas sem forçar a barra aparecer sempre */
+    scrollbar-width: none; /* Firefox - para esconder a barra de rolagem*/ 
+    background-color: #000000;
+}
+
+header{background-color: #000000;
+       padding: 1rem;}
+
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+/*Rodapé*/
+footer{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    color: white;
+    z-index: 1;
+}
+
+.container-listas{
+    display: flex;
+    gap: 25px;}
+
+ol{
+    list-style-type: none; /*Para tirar os numeros das listas*/
+}
+
+.listas {
+    display: flex;
+    margin-left: 39%; /* Empurra as listas pra direita */
+}
+
+.lista {
+    display: flex;
+    gap: 25px;}
+
+.institucional, .duvidas{ /*listas* (ol)*/
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+    margin-top: 47px;
+}
+
+.item{
+    font-size: 15px;
+}
+
+.titulo-A, .titulo-B{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-size: 16px;
+    margin-left: 2%;
+    margin-top: 12px;
+    margin-bottom: 57x;
+}
+
+/*footer, direitos autorais e rede sociais*/
+.direitos, .termo, .privacidade, .cookies{
+ font-size: 11px;
+ display: flex;
+ color: #ffffff;
+ align-items: center;
+}
+
+.direitos-autorais{
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+    margin-left: 46%;
+}
+
+.sociais{ /*Lista de rede sociais*/
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-left: 5px; 
+}
+
+#midia{
+    height: 23px;
+    width: 23px;
+}
+
+.container-final {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* opcional, se precisar adaptar em telas menores */
+    background-color: #242424;
+    padding: 10px;
+}
+
+
+.item{
+color: white;
+font-size: 14px;
+}
+
+.logo2{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 35px;
+  margin-left: 8%;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#logo2{
+    width: 80px;
+    height: 80px;
+}
+
+/*Sections*/
+#inicio    {height: 100dvh;} /*Vai ser puxado pelo cabeçario*/
+#sobre     {height: 100dvh; background-color: black;} /*Vai ser puxado pelo cabeçario*/
+#sobreA    {height: 100dvh; background-color: #000000;
+            margin-inline: 28px; border-left: 8px solid #9a9999; border-right: 8px solid #9a9999;} /*Não vai sert puxado pelo cabeçario*/
+#servicos  {height: 100dvh; background-color: black;} /*Vai ser puxado pelo cabeçario*/
+
+.fade{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in, transform 0.9s ease-in;
+}
+
+.fade.is-visible{
+  opacity: 1;
+  transform: none;
+}
+
+

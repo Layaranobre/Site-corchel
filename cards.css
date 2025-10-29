@@ -1,0 +1,79 @@
+/*Section 4 - Serviços*/ 
+/*Cards*/
+.container_cards{ 
+    max-width: 1400px;
+    min-width: 350px;
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 65px;
+    padding: 1rem;
+}
+
+article{
+    background-color: #191818;
+    height: 235px;
+    width: 290px;
+    scroll-snap-align: center;
+    border-radius: 6px;
+    border: solid rgb(42, 41, 41);
+    box-shadow: 5px 5px 15px rgba(55, 55, 55), /*sombreamento dos cards*/
+              -5px -5px 15px rgb(55, 55, 55);
+    outline: none;
+} 
+
+p{ /*referente ao conteudo dentro dos cards*/
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+}
+
+h3{ /*Referente aos titulos dentro dos cards*/ 
+margin-left: 12px;
+display: inline-block;
+font-size: 17px;
+position: relative;
+bottom: 15px;
+
+}
+
+.cards{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2rem;
+    overflow: hidden;
+    overscroll-behavior: contain;
+    scroll-snap-type: mandatory;
+    scrollbar-width: none;
+    width: fit-content;
+    animation: scrollcards 32s linear infinite;} /*tempo da animação dos cards*/
+
+.cardsB{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2rem;
+    overflow: hidden;
+    overscroll-behavior: contain;
+    scroll-snap-type: mandatory;
+    scrollbar-width: none;
+    width: fit-content;
+    animation: scrollcardsBReverse 32s linear infinite;}
+
+    
+/* Animação */
+@keyframes scrollcards{
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-50%);}
+}
+
+@keyframes scrollcardsBReverse{
+  0% {transform: translateX(-50%);}
+  100% {transform: translateX(0%);}
+}
+
+#icones{ /*Icones dentro dos cards*/
+  height: 45px;
+  width: 45px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 8px black;
+  margin-left: 6%;
+  margin-top: 6%;}
