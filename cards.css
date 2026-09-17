@@ -7,7 +7,7 @@
     justify-content: center;
     gap: 1rem;
     margin-top: 65px;
-    padding: 1rem;
+    overflow: hidden;
 }
 
 article{
@@ -53,7 +53,7 @@ bottom: 15px;
     gap: 2rem;
     overflow: hidden;
     overscroll-behavior: contain;
-    scroll-snap-type: mandatory;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
     width: fit-content;
     animation: scrollcardsBReverse 32s linear infinite;}

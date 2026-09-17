@@ -1,4 +1,4 @@
-function toggleBotao() {  //Botão para o MENU no Mobile.
+function toggleBotao() {  //Função - Botão para o MENU no Mobile.
   let hidden = document.getElementById("hidden");//esse ("mensagem") é id da mensagem
                                         
   // A condição está em none           //opcional esse

@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="base.css">
+    
+   
+    <link rel="stylesheet" href="formulario.css">
     <link rel="stylesheet" href="cards.css">
-    <link rel="stylesheet" href="conteudo.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="conteudo.css"> <!---Esse tem que se manter por ultimo, pois tem o Media@-->
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arimo:ital,wght@0,400..700;1,400..700&family=Arsenal+SC:ital,wght@0,400;0,700;1,700&family=Bebas+Neue&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Oswald:wght@200&display=swap');
@@ -22,7 +25,7 @@
                         <a href="#inicio" class="inicio">Início</a>
                         <a href="#sobre" class="sobre">Sobre</a>
                         <a href="#servicos" class="servicos">Serviços</a>
-                        <a href="#contatos" class="contatos">Contatos</a>
+                        <a href="#orcamento" class="contatos">Contatos</a>
                 </div>
             </div>
                 <button onclick="toggleBotao()" id="botao" class="botao-mobile">☰</button>
@@ -158,6 +161,41 @@
                         <p>A vitrine do seu negócio! Criamos cardápios digitais modernos, organizados e de fácil navegação, que valorizam seus produtos.</p></article>
                     </div>
                 </div>
+            </div>
+       </section>
+
+
+       <section id="orcamento">
+             <div class="fade-b">
+
+            <div class="container_orcamento">
+                <h2 id="s_orcamento">Solicite o seu orçamento</h2>
+                <h5>Preencha seus dados e entraremos em contato o mais rápido possível.</h5>
+
+            <form action="#" method="post" class="formulario">
+                <div class="linha">
+                <h2 id="nome">Nome</h2>
+                <input type="text" name="nome" placeholder=" Digite seu nome..." required>
+                </div>
+
+                <div class="linha">
+                <h2 id="email">Email</h2>
+                <input type="email" name="email" placeholder=" Digite seu e-mail..." required>
+                </div>
+
+                <div class="linha">
+                <h2 id="telefone">Telefone</h2>
+                <input type="tel" name="telefone" placeholder=" Digite seu telefone..." required>
+                </div>
+
+                <div class="linha">
+                <h2 id="informacoes">Informações</h2>
+                <textarea name="descricao" placeholder=" Informações adicionais..." rows="5"></textarea>
+                </div>
+
+            <button class="enviarDados" id="enviarDados" type="submit">Enviar</button>
+        </form>
+            </div>
             </div>
        </section>
 

@@ -157,6 +157,7 @@ h1{ /*Texto principal*/
 .sobreA{
     margin: 1rem;
     font-size: 20px;
+    color: #ffffff;
 }
 
 .titulo-marketing{
@@ -180,6 +181,7 @@ h1{ /*Texto principal*/
   margin: 2rem;
   margin-right: 80px;
   margin-top: 40px;
+  color: #ffffff;
 }
 
 /*Site responsivo - Ajuste de tela*/ 
@@ -363,5 +365,7 @@ h1{ /*Texto principal*/
 @media(min-width: 1400px){
     body{}  }
 
-
-    
+@media(min-width: 1920px){
+    .menu{left: 75%;
+         transform: translateY(-50%)}  
+}
