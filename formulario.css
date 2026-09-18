@@ -3,86 +3,158 @@
     display: flex;
     justify-content: center; /* horizontal */
     align-items: center; /* vertical */
-    
+    padding: 60px 20px;
 }
-
- .fade-b{
+ 
+.fade-b{
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-
-  .container_orcamento{
-    width: 700px;
-    max-width: calc(100% - 30px); /*Depois veja se tem como aumentar esse e tirar o "Margin"*/
-    margin: 15px; /* centraliza horizontalmente */
-    padding: 1rem;
-    border: 3px solid #ebf7ed;
-    border-radius: 10px;
-    background-color: #202020;
-    }
-
-  .card-a, .card-b, .card-c, .card-d{ /*Mexer depois para ver oque precisa tirar*/
-    background-color: #191818;
-    height: 50px;
-    width: 80px;
-    border-radius: 6px;
-    border: solid rgb(42, 41, 41);
-    box-shadow: 5px 5px 15px rgba(55, 55, 55), /*sombreamento dos cards*/
-              -5px -5px 15px rgb(55, 55, 55);
-    outline: none; 
 }
-
-.formulario{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+ 
+/*Cartão do formulário de orçamento*/
+.form-shell{
+    max-width: 660px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #1f1e1c;
+    border: 1px solid #33312d;
+    border-radius: 20px;
+    padding: 44px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    color: #f2f0ec;
 }
-
-/*H2 do "Solicte seu orçamento"*/
+ 
+/*Título "Solicite o seu orçamento"*/
 #s_orcamento{
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/*H2 do formulario de orçamento*/
-#nome, #email, #telefone, #informacoes{ 
-    font-size: 17px;
-    margin-bottom: 5px;
-}
-
-h5{
     text-align: center;
     margin-bottom: 8px;
 }
-
-input[name="nome"],
-input[name="email"],
-input[name="telefone"]{
-    width: 100%;
-    height: 32px;
-    border-radius: 5px;
-    background-color: #e7eee7;
-    }
-
-/*Informações*/
-textarea{ 
-    width: 100%;
-    border-radius: 5px;
-    background-color: #e7eee7;
+ 
+.form-note{
+    font-size: 13.5px;
+    color: #b6b2ab;
+    margin-bottom: 26px;
+    text-align: center;
 }
-
-/*Botão*/
-.enviarDados{ 
-    height: 40px;
+ 
+/*Cada campo (label + input)*/
+.field{
+    margin-bottom: 20px;
+}
+ 
+.field label{
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #f2f0ec;
+    margin-bottom: 7px;
+}
+ 
+.field input,
+.field select,
+.field textarea{
+    width: 100%;
+    padding: 13px 14px;
     border-radius: 10px;
-    border: 3px solid #000000;
-    width: 100%;
-    background-color: #696969;
-    color: #ffffff;
+    border: 1px solid #33312d;
+    background-color: #1a1918;
+    color: #f2f0ec;
+    font-family: inherit;
+    font-size: 14.5px;
+    transition: border-color 0.2s ease;
 }
-
+ 
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+    outline: none;
+    border-color: #c99b6e;
+}
+ 
+.field textarea{
+    resize: vertical;
+    min-height: 110px;
+}
+ 
+/*Nome e Contato lado a lado*/
+.row-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+ 
+@media (max-width: 560px){
+    .row-2{
+        grid-template-columns: 1fr;
+    }
+}
+ 
+/*Botão de enviar*/
+.btn{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 32px;
+    border-radius: 10px;
+    background-color: #c99b6e;
+    color: #1b1a18;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid #c99b6e;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+ 
+.btn:hover{
+    background-color: #8a6644;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+ 
+.btn:disabled{
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+ 
+/*Mensagem de erro no envio*/
+.form-error{
+    display: none;
+    text-align: center;
+    color: #e57373;
+    font-size: 13.5px;
+    margin-top: 14px;
+}
+ 
+.form-error.show{
+    display: block;
+}
+ 
+/*Mensagem de sucesso após o envio*/
+.form-success{
+    display: none;
+    text-align: center;
+    padding: 30px 0;
+}
+ 
+.form-success.show{
+    display: block;
+}
+ 
+.form-success svg{
+    width: 46px;
+    height: 46px;
+    color: #c99b6e;
+    margin: 0 auto 14px;
+}
+ 
+.form-success p{
+    color: #b6b2ab;
+    margin-top: 6px;
+}
+ 
 ::placeholder{
-    font-size: 12px;
-    color: black;
+    font-size: 13px;
+    color: #7a776f;
 }

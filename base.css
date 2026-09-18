@@ -140,7 +140,7 @@ font-size: 14px;
 #sobreA    {height: 100dvh; background-color: #000000; margin-inline: 28px;
             border-radius: 8px; color:#000000; border-left: 8px solid #F3EDE3; border-right: 8px solid #F3EDE3;} /*Não vai sert puxado pelo cabeçario*/
 
-#servicos  {height: 100dvh; background-color: black;} /*Vai ser puxado pelo cabeçario*/
+#servicos  {height: 100dvh; display: flex; flex-direction: column; justify-content: center; background-color: black;} /*Vai ser puxado pelo cabeçario*/
 
 #orcamento {height: 100dvh; background-color: #575656;}
 

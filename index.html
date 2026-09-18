@@ -45,49 +45,24 @@
                     </p>
                 </div>
         </section>
-      
-       <section id="sobre">
-            <div class="fade">
-                <p class="explicacao-site">
-                    Agora você pode colocar tudo que você precisa<br>
-                    em um só lugar, nos nossos sites você consegue <br>
-                    navegar de forma facil e pratica, sem precisar<br>
-                    ficar quebrando cabeça. O que essencial para <br>
-                    atrair novos clientes ao seu site.
-                </p>
-
-                <p class="explicacao-siteB">
-                    E o melhor, seu site fica totalmente responsivo<br> 
-                    e adaptado em celulares, tablets e outros.
-                </p>
-
-                <div class="container-texto">
-                    <div class="card-texto">Fale conosco e coloque tudo<br>
-                                            que você planeja em seu site.<br>
-                                            Designer, imagens, serviços e <br>
-                                            muito mais.</div> 
-                </div>
-            </div>
-       </section>
                
        <section id="sobreA">
             <div class="fade">
                 <div class="sobreA">
-                <h2 class="titulo-marketing">Muito além do desenvolvimento web!</h2> <br>
+                <h5 class="sobre_corchel">Sobre a corchel</h5>
+                <h2 class="titulo-marketing">Simplicidade que comunica, estratégia que converte.</h2> <br>
 
-                            <p class="explicacao-marketing">Aqui você encontra soluções criativas e personalizadas para destacar sua marca, projeto 
-                            ou evento. <br><br> Além de sites modernos e responsivos, oferecemos:</p>
-
-                            <br>
-
-                                <ul class="marketing-itens">
-                                    <li>Edição de vídeos <br></li>
-                                    <li>Páginas de links (link na bio) <br></li>
-                                    <li>Convites digitais (casamento/aniversário) <br></li>
-                                    <li>Catálogos e cardápios <br></li>
-                                    <li>Apresentações comerciais, portfólios e posts <br></li>
-                                    <li>Traduções e edição de videos. <br></li>
-                                </ul>
+                                <p class="marketing-itens">Trabalhamos com um olhar minimalista: pouco visual, muito propósito. Cada projeto é pensado 
+                                                           para representar bem a sua marca, seja um site, um cardápio ou uma simples página de links. 
+                                <p class="marketing-itens">Você me envia as informações pelo formulário abaixo, e eu entro em contato para entender melhor 
+                                                           a sua necessidade e apresentar a melhor solução.</p><br>
+                                
+                                <ol class="explicacao-marketing">
+                                <li class="l""><span class="check-dourado">✔</span>Atendimento próximo e personalizado.</li>  
+                                <li class="l"><span class="check-dourado">✔</span> Entrega com identidade visual coerente.</li>      
+                                <li class="l"><span class="check-dourado">✔</span> Prazos combinados e cumpridos.</li>               
+                                </ol>
+                                
                 </div>
                             <p class="texto-chave">Um sistema de designer <br>
                                                 que cresce junto com você!</p>
@@ -164,37 +139,60 @@
             </div>
        </section>
 
-
-       <section id="orcamento">
+              <section id="orcamento">
              <div class="fade-b">
 
-            <div class="container_orcamento">
+            <div class="form-shell">
                 <h2 id="s_orcamento">Solicite o seu orçamento</h2>
-                <h5>Preencha seus dados e entraremos em contato o mais rápido possível.</h5>
+                <p class="form-note">Preencha seus dados e entraremos em contato o mais rápido possível.</p>
 
-            <form action="#" method="post" class="formulario">
-                <div class="linha">
-                <h2 id="nome">Nome</h2>
-                <input type="text" name="nome" placeholder=" Digite seu nome..." required>
+            <form id="formOrcamento" action="https://formsubmit.co/layaranobre950@gmail.com" method="post">
+                <input type="hidden" name="_subject" value="Novo orçamento pelo site Corchel">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <div class="row-2">
+                    <div class="field">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="field">
+                        <label for="contato">Telefone ou e-mail</label>
+                        <input type="text" id="contato" name="contato" placeholder="(00) 00000-0000" required>
+                    </div>
                 </div>
 
-                <div class="linha">
-                <h2 id="email">Email</h2>
-                <input type="email" name="email" placeholder=" Digite seu e-mail..." required>
+                <div class="field">
+                    <label for="servico">Serviço de interesse</label>
+                    <select id="servico" name="servico">
+                        <option>Desenvolvimento web</option>
+                        <option>Criação de convites</option>
+                        <option>Cardápios</option>
+                        <option>Páginas de links na bio</option>
+                        <option>Catálogos</option>
+                        <option>Posts</option>
+                        <option>Edição de vídeos</option>
+                        <option>Landing pages</option>
+                        <option>Google Meu Negócio</option>
+                        <option>Outro / não sei ainda</option>
+                    </select>
                 </div>
 
-                <div class="linha">
-                <h2 id="telefone">Telefone</h2>
-                <input type="tel" name="telefone" placeholder=" Digite seu telefone..." required>
+                <div class="field">
+                    <label for="comentarios">Comentários (opcional)</label>
+                    <textarea id="comentarios" name="comentarios" placeholder="Conte um pouco mais sobre o que você precisa..."></textarea>
                 </div>
 
-                <div class="linha">
-                <h2 id="informacoes">Informações</h2>
-                <textarea name="descricao" placeholder=" Informações adicionais..." rows="5"></textarea>
-                </div>
+                <button type="submit" class="btn" id="btnEnviar">Enviar informações</button>
+            </form>
 
-            <button class="enviarDados" id="enviarDados" type="submit">Enviar</button>
-        </form>
+            <div class="form-success" id="formSuccess">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                <h3>Recebido!</h3>
+                <p>Obrigado pelo envio. Em breve entro em contato.</p>
+            </div>
+
+            <p class="form-error" id="formError">Não foi possível enviar. Tente novamente em instantes.</p>
             </div>
             </div>
        </section>
@@ -203,7 +201,7 @@
     <footer>
         <section id="contatos">
             <div class="container-listas">
-            <div class="logo2">  <img src="assets/logo1.png" alt="" id="logo2"> &nbsp;CORCHEL</div>
+            <div class="logo2">  <img src="assets/logo1.png" alt="" id="logo2">CORCHEL</div>
 
                     <div class="listas">
                         <div class="lista">   

@@ -2,19 +2,18 @@
 /*Cards*/
 .container_cards{ 
     max-width: 1400px;
-    min-width: 350px;
+    min-width: 0px;
+    margin-inline: auto; /* centraliza o bloco quando a tela é maior que o max-width */
     display: grid;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 65px;
+    gap: 2rem;
     overflow: hidden;
 }
 
 article{
     background-color: #191818;
-    height: 235px;
-    width: 290px;
-    scroll-snap-align: center;
+    height: 180px;
+    width: 260px;
     border-radius: 6px;
     border: solid rgb(42, 41, 41);
     box-shadow: 5px 5px 15px rgba(55, 55, 55), /*sombreamento dos cards*/
@@ -24,15 +23,16 @@ article{
 
 p{ /*referente ao conteudo dentro dos cards*/
   margin-left: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
+  font-size: 14px;
 }
 
 h3{ /*Referente aos titulos dentro dos cards*/ 
 margin-left: 12px;
 display: inline-block;
-font-size: 17px;
+font-size: 15px;
 position: relative;
-bottom: 15px;
+bottom: 10px;
 
 }
 
@@ -41,10 +41,9 @@ bottom: 15px;
     grid-auto-flow: column;
     gap: 2rem;
     overflow: hidden;
-    overscroll-behavior: contain;
-    scroll-snap-type: mandatory;
     scrollbar-width: none;
     width: fit-content;
+    will-change: transform;
     animation: scrollcards 32s linear infinite;} /*tempo da animação dos cards*/
 
 .cardsB{
@@ -52,28 +51,28 @@ bottom: 15px;
     grid-auto-flow: column;
     gap: 2rem;
     overflow: hidden;
-    overscroll-behavior: contain;
-    scroll-snap-type: x mandatory;
     scrollbar-width: none;
     width: fit-content;
+    will-change: transform;
     animation: scrollcardsBReverse 32s linear infinite;}
 
     
 /* Animação */
 @keyframes scrollcards{
-  0% {transform: translateX(0);}
-  100% {transform: translateX(-50%);}
+  0% {transform: translate3d(0, 0, 0);}
+  100% {transform: translate3d(-50%, 0, 0);}
 }
 
 @keyframes scrollcardsBReverse{
-  0% {transform: translateX(-50%);}
-  100% {transform: translateX(0%);}
+  0% {transform: translate3d(-50%, 0, 0);}
+  100% {transform: translate3d(0, 0, 0);}
 }
 
 #icones{ /*Icones dentro dos cards*/
-  height: 45px;
-  width: 45px;
+  height: 28px;
+  width: 28px;
   border-radius: 2px;
   box-shadow: 0 0 0 8px black;
   margin-left: 6%;
   margin-top: 6%;}
+ 
