@@ -302,7 +302,7 @@ h1{ /*Texto principal*/
 
     #inicio{height: 80dvh;}
     #sobre {height: 60dvh; margin-bottom: 5rem;}
-    #sobreA {height: 78dvh;}
+    #sobreA {height: 100dvh;}
     #servicos {height: 70dvh;}
 
     .cards, .cardsB{
