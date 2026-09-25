@@ -1,0 +1,91 @@
+/*Cabeçalho simplificado das páginas legais*/
+.legal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 6%;
+    background-color: #000000;
+    border-bottom: 1px solid #242424;
+}
+
+.legal-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-family: "Cinzel", serif;
+    color: #ffffff;
+}
+
+.legal-logo img{
+    height: 40px;
+    width: auto;
+}
+
+.legal-voltar{
+    font-size: 14px;
+    color: #c99b6e;
+    text-decoration: none;
+}
+
+.legal-voltar:hover{
+    text-decoration: underline;
+}
+
+/*Conteúdo*/
+.legal-container{
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 60px 6% 100px;
+    color: #f2f0ec;
+}
+
+.legal-container h1{
+    font-family: "Cinzel", serif;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.legal-atualizado{
+    font-size: 13px;
+    color: #b6b2ab;
+    margin-bottom: 40px;
+}
+
+.legal-container h2{
+    font-size: 20px;
+    margin-top: 36px;
+    margin-bottom: 12px;
+    color: #c99b6e;
+}
+
+.legal-container p{
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #d9d6d0;
+    margin-bottom: 14px;
+}
+
+.legal-container ul{
+    margin: 0 0 14px 20px;
+    color: #d9d6d0;
+    font-size: 15.5px;
+    line-height: 1.7;
+}
+
+.legal-container li{
+    margin-bottom: 6px;
+}
+
+.legal-container a{
+    color: #c99b6e;
+}
+
+/*Rodapé simplificado*/
+.legal-footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #242424;
+    color: #b6b2ab;
+    font-size: 12px;
+}

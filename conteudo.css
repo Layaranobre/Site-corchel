@@ -303,7 +303,7 @@ h1{ /*Texto principal*/
     #inicio{height: 80dvh;}
     #sobre {height: 60dvh; margin-bottom: 5rem;}
     #sobreA {height: 100dvh;}
-    #servicos {height: 100dvh;}
+    #servicos {height: 80dvh;}
 
     .cards, .cardsB{
             min-height: 18px;
@@ -613,6 +613,8 @@ h1{ /*Texto principal*/
     .container_cards{
         max-width: 1919.98px;
     }
+
+
 }
 
 @media(min-width: 1920px){
@@ -623,4 +625,25 @@ h1{ /*Texto principal*/
         max-width: 1920px;
     }
 }
+/*Formulário de orçamento - versão compacta para telas com pouca altura (ex: notebooks 1366x768)*/
+@media (max-height: 820px){
+    #orcamento{
+        padding: 30px 20px;
+    }
 
+    .form-shell{
+        padding: 28px;
+    }
+
+    .form-note{
+        margin-bottom: 18px;
+    }
+
+    .field{
+        margin-bottom: 14px;
+    }
+
+    .field textarea{
+        min-height: 80px;
+    }
+}
