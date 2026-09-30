@@ -431,8 +431,6 @@ h1{ /*Texto principal*/
     .item{font-size: 20px;}
 
     .logo2{ 
-        position: relative; 
-        left: 20px;
         margin-bottom: 34px;
         font-size: 35px;
         font-weight: 500;}
@@ -453,27 +451,21 @@ h1{ /*Texto principal*/
     .titulo-A{
         font-size: 22px;
         justify-content: center;
-        margin-left: 5%;}
+        margin-left: 2%;}
 
     .titulo-B{
         font-size: 22px;
-        margin-left: 10%;
+        margin-left: 4%;
     }
 
     .container-final{
-        margin: 0;
-        display: flex;
-        justify-content: center;
+       justify-content: space-between;
+       align-items: center;
     }
 
     #midia{
          height: 25px;
          width: 25px;
-    }
-
-    .sociais{
-        padding-bottom: 1rem;
-        justify-content: center;
     }
 
     .direitos-autorais {
@@ -488,10 +480,6 @@ h1{ /*Texto principal*/
         white-space: nowrap; /* evita que os textos quebrem internamente */
 }
 
-    .direitos{
-        padding-bottom: 20px;
-        justify-content: center;
-}
 }
 @media(min-width: 992px) and (max-width: 1199.98px){  /*Tablets*/
     
@@ -544,8 +532,6 @@ h1{ /*Texto principal*/
     .item{font-size: 20px;}
 
     .logo2{ 
-        position: relative; 
-        left: 20px;
         margin-bottom: 34px;
         font-size: 35px;
         font-weight: 500;}
@@ -566,27 +552,21 @@ h1{ /*Texto principal*/
     .titulo-A{
         font-size: 22px;
         justify-content: center;
-        margin-left: 5%;}
+        margin-left: 2%;}
 
     .titulo-B{
         font-size: 22px;
-        margin-left: 10%;
+        margin-left: 4%;
     }
 
     .container-final{
-        margin: 0;
-        display: flex;
-        justify-content: center;
+       justify-content: space-between;
+       align-items: center;
     }
 
     #midia{
          height: 25px;
          width: 25px;
-    }
-
-    .sociais{
-        padding-bottom: 1rem;
-        justify-content: center;
     }
 
     .direitos-autorais {
@@ -600,11 +580,6 @@ h1{ /*Texto principal*/
     .direitos-autorais li {
         white-space: nowrap; /* evita que os textos quebrem internamente */
 }
-
-    .direitos{
-        padding-bottom: 20px;
-        justify-content: center;
-}
 }
 @media(min-width: 1200px) and (max-width: 1399.98px){   /*Notebook*/
    
@@ -613,6 +588,8 @@ h1{ /*Texto principal*/
     .container_cards{
         max-width: 1919.98px;
     }
+
+
 
 
 }
@@ -624,6 +601,21 @@ h1{ /*Texto principal*/
     .container_cards{
         max-width: 1920px;
     }
+
+    .listas {margin-left: 55%}
+
+    .container-final{
+        justify-content: space-between;
+    }
+
+ .titulo-A{
+        justify-content: center;
+        margin-left: 1%;}
+
+    .titulo-B{
+        margin-left: 1%;
+    }
+
 }
 /*Formulário de orçamento - versão compacta para telas com pouca altura (ex: notebooks 1366x768)*/
 @media (max-height: 820px){

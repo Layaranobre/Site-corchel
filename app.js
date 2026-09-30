@@ -66,3 +66,30 @@ let observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
 
+window.addEventListener("DOMContentLoaded", () => {
+    const botao = document.getElementById("fc");
+
+    if (botao) {
+        // Remove qualquer comportamento antigo do botão
+        botao.href = "javascript:void(0);"; 
+
+        // Dispara o link correto diretamente no clique
+        botao.addEventListener("click", (evento) => {
+            evento.preventDefault(); // Impede o link vazio de atualizar a página
+
+            const telefone = "5527996410144"; 
+            const mensagemTexto = "Olá! Gostaria de saber mais sobre os serviços.";
+            const mensagemCodificada = encodeURIComponent(mensagemTexto);
+
+            // Monta a URL limpa e oficial
+            const linkFinal = `https://whatsapp.com{telefone}&text=${mensagemCodificada}`;
+
+            // Abre o WhatsApp (App no celular ou Web no PC)
+            window.open(linkFinal, "_blank");
+        });
+    }
+});
+ 
+
+
+
