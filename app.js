@@ -66,8 +66,36 @@ let observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
 
+document.addEventListener("DOMContentLoaded", () => {
+    const container_cards = document.querySelector('.container_cards');
 
- 
+    if (container_cards) {
+        // 1. Controle de clique DENTRO dos carrosséis
+        container_cards.addEventListener('click', (evento) => {
+            
+            // Se clicou na fileira de CIMA (.cards)
+            if (evento.target.closest('.cards')) {
+                container_cards.classList.add('parar-cima');     // Para a de cima
+                container_cards.classList.remove('parar-baixo'); // Destrava a de baixo
+            }
+            
+            // Se clicou na fileira de BAIXO (.cardsB)
+            else if (evento.target.closest('.cardsB')) {
+                container_cards.classList.add('parar-baixo');   // Para a de baixo
+                container_cards.classList.remove('parar-cima'); // Destrava a de cima
+            }
+            
+        });
+
+        // 2. Controle de clique FORA dos carrosséis
+        document.addEventListener('click', (evento) => {
+            // Se o clique NÃO foi dentro do container_cards, destrava os dois carrosséis
+            if (!container_cards.contains(evento.target)) {
+                container_cards.classList.remove('parar-cima', 'parar-baixo');
+            }
+        });
+    }
+});
 
 
 

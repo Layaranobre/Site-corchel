@@ -1,3 +1,20 @@
+:root {
+  /* ==========================================
+     PAINEL CENTRAL DE CORES (VARIÁVEIS)
+     ========================================== */
+  --cor-texto-principal: #ffffff;
+  --cor-fundo-sombra: #262525;
+  --cor-borda-card: #9a9999;
+  --cor-destaque-vermelho: #df3b3b;
+  --gradiente-dourado: linear-gradient(135deg, #FFE066 0%, #F5B041 50%, #9A7D0A 100%);
+
+  /* Novas Cores da Section 4 (Serviços) */
+  --cor-fundo-card: #191818;
+  --cor-borda-card-servico: rgb(42, 41, 41);
+  --cor-sombra-cards: rgba(55, 55, 55, 0.4);
+  --cor-sombra-icone: black;
+}
+
 /*Section 4 - Serviços*/ 
 /*Cards*/
 .container_cards{ 
@@ -14,10 +31,12 @@ article{
     background-color: #191818;
     height: 180px;
     width: 260px;
-    border-radius: 6px;
+    border-radius: 15px;
     border: solid rgb(42, 41, 41);
-    box-shadow: 5px 5px 15px rgba(55, 55, 55), /*sombreamento dos cards*/
-              -5px -5px 15px rgb(55, 55, 55);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6),  /* Força uma sombra escura bem embaixo */
+              5px 5px 15px rgba(55, 55, 55, 0.4),  /* Mantém o brilho suave nas laterais */
+              -5px -5px 15px rgba(55, 55, 55, 0.4);
+    margin-bottom: 10px; 
     outline: none;
 } 
 
@@ -45,6 +64,7 @@ bottom: 10px;
     width: fit-content;
     will-change: transform;
     animation: scrollcards 32s linear infinite;} /*tempo da animação dos cards*/
+
 
 .cardsB{
     display: grid;
@@ -75,4 +95,14 @@ bottom: 10px;
   box-shadow: 0 0 0 8px black;
   margin-left: 6%;
   margin-top: 6%;}
+
+ /* Quando a fileira de cima (cards) deve parar */
+.container_cards.parar-cima .cards {
+    animation: none !important;
+}
+
+/* Quando a fileira de baixo (cardsB) deve parar */
+.container_cards.parar-baixo .cardsB {
+    animation: none !important;
+}
  

@@ -4,6 +4,37 @@
     box-sizing: border-box;
 }
 
+:root {
+  /* ==========================================
+     PAINEL CENTRAL DE CORES (VARIÁVEIS)
+     ========================================== */
+  /* Tons Principais, Neutros e Textos */
+  --cor-texto-principal: #ffffff;
+  --cor-texto-secundario: white;
+  --cor-fundo-preto: #000000;
+  --cor-fundo-preto-puro: black;
+
+  /* Tons de Cinza, Sombras e Bordas */
+  --cor-fundo-sombra: #262525;
+  --cor-borda-card: #9a9999;
+  --cor-fundo-final: #242424;
+
+  /* Cores de Destaque */
+  --cor-destaque-vermelho: #df3b3b;
+  --gradiente-dourado: linear-gradient(135deg, #FFE066 0%, #F5B041 50%, #9A7D0A 100%);
+
+  /* Cores das Seções e Cards (Serviços / Estrutura) */
+  --cor-fundo-card: #191818;
+  --cor-borda-card-servico: rgb(42, 41, 41);
+  --cor-sombra-cards: rgba(55, 55, 55, 0.4);
+  --cor-sombra-icone: black;
+  
+  /* Cores de Fundo das Sections */
+  --cor-bg-sobreA: #383636;
+  --cor-bg-servicos: rgb(12, 12, 12);
+  --cor-bg-orcamento: #575656;
+}
+
 html, body{
     height: 100dvh;
     scroll-behavior: smooth; /*Para rolar para a pagina, quando clicar no link*/
@@ -137,10 +168,9 @@ font-size: 14px;
 
 #sobre     {height: 100dvh; background-color: black;} /*Vai ser puxado pelo cabeçario*/
 
-#sobreA    {height: 100dvh; background-color: #29211F; /*margin-inline: 28px;
-            border-left: 8px solid #F3EDE3; border-right: 8px solid #F3EDE3*/;} /*Não vai sert puxado pelo cabeçario*/
+#sobreA    {height: 100dvh; background-color: #383636;}
 
-#servicos  {height: 100dvh; display: flex; flex-direction: column; justify-content: center; background-color: black;} /*Vai ser puxado pelo cabeçario*/
+#servicos  {height: 100dvh; display: flex; flex-direction: column; justify-content: center; background-color: rgb(12, 12, 12);} /*Vai ser puxado pelo cabeçario*/
 
 #orcamento {/*height: 100dvh;*/ background-color: #575656;}
 

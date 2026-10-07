@@ -1,3 +1,14 @@
+:root {
+  /* ==========================================
+     PAINEL CENTRAL DE CORES (VARIÁVEIS)
+     ========================================== */
+  --cor-texto-principal: #ffffff;
+  --cor-fundo-sombra: #262525;
+  --cor-borda-card: #9a9999;
+  --cor-destaque-vermelho: #df3b3b;
+  --gradiente-dourado: linear-gradient(135deg, #FFE066 0%, #F5B041 50%, #9A7D0A 100%);
+}
+
 /*Cabeçario*/
 .navegar, .menu{
     display: flex;
@@ -14,7 +25,7 @@
 .inicio, .sobre, .servicos, .contatos{
     margin: 6px;
     font-weight: bold;
-    color: white;
+    color: var(--cor-texto-principal);
 }
 
 /* Botão de abrir as opções*/
@@ -23,9 +34,8 @@
   align-items: center;
   position: fixed;
   left: 88%;
-  font-size: 20px;
   background-color: transparent;
-  color: #ffffff;
+  color: var(--cor-texto-principal);
   border: none;
   display: none; /* oculta por padrão */
   font-size: 27px;
@@ -39,7 +49,7 @@
   font-size: 24px;
   font-family: "Cinzel", serif;
   font-optical-sizing: auto;
-  color: #ffffff;
+  color: var(--cor-texto-principal);
   z-index: 4;
 }
 
@@ -50,7 +60,8 @@
 
 a{ 
     text-decoration: none;
-    font-size: 18px;}
+    font-size: 18px;
+}
 
 /*conteudo do site*/
 .container-inicio{
@@ -61,13 +72,13 @@ a{
     align-items: center;
     text-align: center;
     position: relative;
-    color: #ffffff;
+    color: var(--cor-texto-principal);
     gap: 0.8rem;
     text-shadow:
-    -0.5px -0.5px 0 #262525,
-     0.5px -0.5px 0 #262525,
-    -0.5px  0.5px 0 #262525,
-     0.5px  0.5px 0 #262525;
+    -0.5px -0.5px 0 var(--cor-fundo-sombra),
+     0.5px -0.5px 0 var(--cor-fundo-sombra),
+    -0.5px  0.5px 0 var(--cor-fundo-sombra),
+     0.5px  0.5px 0 var(--cor-fundo-sombra);
 }
 
 h1{ /*Texto principal*/
@@ -93,15 +104,14 @@ h1{ /*Texto principal*/
     letter-spacing: 1px; /* separa as letras */
 }
 
-
 .imagem-fundo{
   position: absolute;
-  top:0; 
+  top: 0; 
   left: 0;
   width: 100vw;         /* Use viewport width, não 100% */
   height: 100vh;         /* Altura controlada pela viewport */
   object-fit: cover;
-  filter: brightness(55%);
+  filter: brightness(50%);
   z-index: -1;       /* Joga a imagem para trás do conteúdo */
 }
 
@@ -144,11 +154,11 @@ h1{ /*Texto principal*/
     height: 175px;
     width: 34%;
     position: relative;
-    color: #ffffff;
+    color: var(--cor-texto-principal);
     justify-content: center;
     align-items: center;
     font-size: 23px;
-    border: 4px solid #9a9999;
+    border: 4px solid var(--cor-borda-card);
     border-radius: 8px;
 }
 
@@ -156,21 +166,20 @@ h1{ /*Texto principal*/
 .sobreA{
     margin: 1rem;
     font-size: 20px;
-    color: #ffffff;
+    color: var(--cor-texto-principal);
 }
 
 .titulo-marketing{
     margin-left: 1%;
-    
 }
+
 .marketing-itens{
     font-size: 19px;
-   
 }
 
 .sobre_corchel{
     margin: 1%;
-    color: brown;
+    color: var(--cor-destaque-vermelho);
     font-weight: 295;
 }
 
@@ -185,7 +194,7 @@ h1{ /*Texto principal*/
 .check-dourado {
     font-size: 24px;
     font-weight: bold;
-    background: linear-gradient(135deg, #FFE066 0%, #F5B041 50%, #9A7D0A 100%);
+    background: var(--gradiente-dourado);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -201,9 +210,8 @@ h1{ /*Texto principal*/
   justify-content: right;
   margin-right: 80px;
   margin-top: 330px;
-  color: #ffffff;
+  color: var(--cor-texto-principal);
 }
-
 
 /*Site responsivo - Ajuste de tela*/ 
 @media(min-width: 320px) and (max-width: 767.98px){  /*Celulares menores*/
@@ -373,11 +381,6 @@ h1{ /*Texto principal*/
 
     .direitos-autorais li {
         white-space: nowrap; /* evita que os textos quebrem internamente */
-}
-
-    .direitos{
-        padding-bottom: 20px;
-        justify-content: center;
 }
 }
 
